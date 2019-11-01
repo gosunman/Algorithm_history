@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7105c3af-a24c-4a25-89a1-17f2ce1a1c1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Algorithm_history.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Algorithm_history.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/분수_스토쿠/분수_스도쿠" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/분수_스토쿠/분수_스도쿠.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/이상한_피라미드_탐험" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/이상한_피라미드_탐험.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험/이상한_피라미드_탐험" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험/이상한_피라미드_탐험.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,45 +18,55 @@
     <session id="1212765075">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="5" />
+          <entry key="분수_스도쿠" value="2" />
           <entry key="이상한_피라미드_탐험" value="2" />
+          <entry key="초보자를_위한_점프대_배치하기" value="1" />
+          <entry key="초보자를_위한_점프대_설치하기" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="1" />
+          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="Python" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="273" />
+          <entry key="Python Console" value="101" />
+          <entry key="dummy" value="21" />
+          <entry key="py" value="2853" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="273" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Python" value="2954" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.7249123">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험.py">
+            <entry file="file://$PROJECT_DIR$/SWEA/분수_스토쿠/분수_스도쿠.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="326">
-                  <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+                <state relative-caret-position="180">
+                  <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
+                    <marker date="1572598846445" expanded="true" signature="1980:1983" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -66,12 +75,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험">
+            <entry file="file://$PROJECT_DIR$/SWEA/분수_스토쿠/분수_스도쿠">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="54">
-                  <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+                <state relative-caret-position="126">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -94,6 +103,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/SWEA/이상한_피라미드_탐험.py" />
+        <option value="$PROJECT_DIR$/SWEA/점프점프.py" />
+        <option value="$PROJECT_DIR$/SWEA/초보자를_위한_점프대_설치하기.py" />
+        <option value="$PROJECT_DIR$/SWEA/초보자를_위한_점프대_배치하기" />
+        <option value="$PROJECT_DIR$/SWEA/초보자를_위한_점프대_배치하기.py" />
+        <option value="$PROJECT_DIR$/SWEA/분수_스토쿠/분수_스도쿠" />
+        <option value="$PROJECT_DIR$/SWEA/분수_스토쿠/분수_스도쿠.py" />
       </list>
     </option>
   </component>
@@ -128,7 +143,13 @@
               <item name="Algorithm_history" type="b2602c69:ProjectViewProjectNode" />
               <item name="Algorithm_history" type="462c0819:PsiDirectoryNode" />
               <item name="SWEA" type="462c0819:PsiDirectoryNode" />
-              <item name="Complete" type="462c0819:PsiDirectoryNode" />
+              <item name="분수_스토쿠" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm_history" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm_history" type="462c0819:PsiDirectoryNode" />
+              <item name="SWEA" type="462c0819:PsiDirectoryNode" />
+              <item name="초보자를_위한_점프대_배치하기" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -145,15 +166,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\student\Algorithm_history" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\student\Algorithm_history\SWEA\초보자를_위한_점프대_설치하기" />
+      <recent name="C:\Users\student\Algorithm_history\SWEA\Complete\D5\이상한_피라미드_탐험" />
+      <recent name="C:\Users\student\Algorithm_history" />
       <recent name="C:\Users\student\Algorithm_history\SWEA\Complete\D5" />
       <recent name="$PROJECT_DIR$/SWEA/Complete/A형_모의고사/프로세서_연결하기" />
-      <recent name="C:\Users\student\Algorithm_history\SWEA" />
-      <recent name="C:\Users\student\Algorithm_history\SWEA\Complete\A형_모의고사\활주로_건설" />
-      <recent name="C:\Users\student\Algorithm_history\SWEA\Complete\A형_모의고사\줄기세포_배양" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\student\Algorithm_history" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -168,7 +189,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.이상한_피라미드_탐험">
+  <component name="RunManager" selected="Python.분수_스도쿠">
     <configuration name="BJ_Baaaaaaaaaduk2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithm_history" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,7 +211,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="줄기세포_배양" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="분수_스도쿠" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithm_history" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -198,32 +219,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEA/분수_스토쿠" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\student\Algorithm_history\SWEA\Complete\A형_모의고사\줄기세포_배양\줄기세포_배양_my_own.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="프로세서_연결하기" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Algorithm_history" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEA" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEA/Complete/A형_모의고사/프로세서_연결하기/프로세서_연결하기.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEA/분수_스토쿠/분수_스도쿠.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -286,7 +286,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\student\Algorithm_history\SWEA\Complete\D5\이상한_피라미드_탐험.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\student\Algorithm_history\SWEA\Complete\D5\이상한_피라미드_탐험\이상한_피라미드_탐험.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -295,7 +295,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="줄기세포_배양_fastest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="초보자를_위한_점프대_배치하기" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithm_history" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -303,11 +303,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEA" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\student\Algorithm_history\SWEA\Complete\A형_모의고사\줄기세포_배양\줄기세포_배양_fastest.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\student\Algorithm_history\SWEA\초보자를_위한_점프대_설치하기\초보자를_위한_점프대_배치하기.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -339,18 +339,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.BJ_Baaaaaaaaaduk2" />
-      <item itemvalue="Python.줄기세포_배양" />
-      <item itemvalue="Python.줄기세포_배양_fastest" />
       <item itemvalue="Python.trash" />
       <item itemvalue="Python.이상한_피라미드_탐험" />
+      <item itemvalue="Python.초보자를_위한_점프대_배치하기" />
+      <item itemvalue="Python.분수_스도쿠" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.분수_스도쿠" />
+        <item itemvalue="Python.초보자를_위한_점프대_배치하기" />
         <item itemvalue="Python.이상한_피라미드_탐험" />
         <item itemvalue="Python.BJ_Baaaaaaaaaduk2" />
         <item itemvalue="Python.trash" />
-        <item itemvalue="Python.줄기세포_배양_fastest" />
-        <item itemvalue="Python.줄기세포_배양" />
       </list>
     </recent_temporary>
   </component>
@@ -379,20 +379,20 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.26486486" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32972974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -420,20 +420,58 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="ans_table" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험">
+    <entry file="file://$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험/이상한_피라미드_탐험">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험.py">
+    <entry file="file://$PROJECT_DIR$/SWEA/Complete/D5/이상한_피라미드_탐험/이상한_피라미드_탐험.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        <state>
+          <caret selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SWEA/초보자를_위한_점프대_설치하기/초보자를_위한_점프대_배치하기" />
+    <entry file="file://$PROJECT_DIR$/SWEA/초보자를_위한_점프대_설치하기/초보자를_위한_점프대_배치하기.py" />
+    <entry file="file://$PROJECT_DIR$/SWEA/초보자를_위한_점프대_배치하기/초보자를_위한_점프대_배치하기.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="332" selection-start-line="332" selection-end-line="332" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SWEA/분수_스토쿠/분수_스도쿠">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SWEA/분수_스토쿠/분수_스도쿠.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+            <marker date="1572598846445" expanded="true" signature="1980:1983" ph="..." />
           </folding>
         </state>
       </provider>
