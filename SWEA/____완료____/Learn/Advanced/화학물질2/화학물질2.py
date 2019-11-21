@@ -13,8 +13,8 @@ for tc in range(int(input())):
     elements = []
     info_front = {}
     info_end = {}
-
     cnt = 0
+
     for y in range(size_table):
         for x in range(size_table):
             if table[y][x]:
@@ -33,37 +33,36 @@ for tc in range(int(input())):
                     for row in range(x, i + 1):
                         table[column][row] = 0
 
-    data = [elements.pop()]
-    cnt = 0
+    data = [elements[0]]
+    cnt = 1
     while cnt != len(elements):
         a = info_end.get(data[0][0])
-        if a == 0 or a:
-            data.insert(0, elements[info_end.get(data[0][0])])
+        if a is not None:
+            data.insert(0, elements[a])
         else:
             b = info_front.get(data[-1][1])
-            if b == 0 or b:
-                data.append(elements[info_front.get(data[-1][1])])
+            if b is not None:
+                data.append(elements[b])
         cnt += 1
 
-    cnt = len(data)
-
-    new_data = [data[0][0]]
+    sources = [data[0][0]]
     for index in range(cnt):
-        new_data.append(data[index][1])
+        sources.append(data[index][1])
 
-    table = [[0 for _ in range(cnt + 1)] for __ in range(cnt + 1)]
+    table = [[0 for _ in range(cnt)] for __ in range(cnt)]
 
-    for layer in range(1, cnt+1):
-        for index in range(cnt - layer + 1):
-            if table[index][index + layer - 1] < table[index + 1][index + layer]:
-                common = table[index][index + layer - 1]
-                new = new_data[index] * new_data[layer] * new_data[layer + 1]
-                table[index][index + layer] = common + new
-            else:
-                common = table[index + 1][index + layer]
-                new = new_data[index] * new_data[index+1] * new_data[index + 2]
-                table[index][index + layer] = common + new
-    print("#{} {}".format(tc + 1, table[cnt][cnt]))
+    for layer in range(1, cnt):
+        for count in range(cnt - layer):
+            y = count
+            x = count + layer
+            answer = float('inf')
+            for k in range(y, x):
+                a, b, c = sources[y-1], sources[k], sources[x]
+                temp = table[y][k] + table[k+1][x] + a*b*c
+                if temp < answer:
+                    answer = temp
+            table[y][x] = answer
+    print("#{} {}".format(tc + 1, table[0][cnt-1]))
 
 end_time = timeit.default_timer()
 
