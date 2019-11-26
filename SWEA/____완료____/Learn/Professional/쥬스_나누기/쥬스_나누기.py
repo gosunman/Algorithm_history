@@ -7,7 +7,9 @@ sys.stdin = open('쥬스_나누기', 'r')
 start_time = timeit.default_timer()
 
 for testCase in range(int(input())):
-    print("#{} {}".format(testCase + 1, 0))
+    n = int(input())
+    answer = [f'1/{n}'] * n
+    print("#{} {}".format(testCase + 1, " ".join(answer)))
 
 end_time = timeit.default_timer()
 
