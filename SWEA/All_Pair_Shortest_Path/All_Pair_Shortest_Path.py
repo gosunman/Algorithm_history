@@ -8,7 +8,7 @@ start_time = timeit.default_timer()
 
 for testCase in range(int(input())):
     n_node, n_edge = map(int, input().split())
-    table_edge = [[float('inf') for _ in range(n_node)] for __ in range(n_node)]
+    table_edge = [[-1 for _ in range(n_node)] for __ in range(n_node)]
     for _ in range(n_edge):
         start, end, weight = map(int, input().split())
         table_edge[start-1][end-1] = weight
@@ -17,16 +17,19 @@ for testCase in range(int(input())):
             if k != start:
                 for end in range(n_node):
                     if k != end and start != end:
-                        option1 = table_edge[start][end]
-                        option2 = table_edge[start][k]+table_edge[k][end]
-                        table_edge[start][end] = min(option1, option2)
+                        if table_edge[start][end] != -1:
+                            if table_edge[start][k] != -1 and table_edge[k][end] != -1:
+                                table_edge[start][end] = min(table_edge[start][end], table_edge[start][k]+table_edge[k][end])
+                        else:
+                            if table_edge[start][k] != -1 and table_edge[k][end] != -1:
+                                table_edge[start][end] = table_edge[start][k]+table_edge[k][end]
     answer = []
     for j in range(n_node):
         for i in range(n_node):
             if i == j:
                 answer.append('0')
             else:
-                if table_edge[j][i] == float('inf'):
+                if table_edge[j][i] == -1:
                     answer.append('-1')
                 else:
                     answer.append(str(table_edge[j][i]))
