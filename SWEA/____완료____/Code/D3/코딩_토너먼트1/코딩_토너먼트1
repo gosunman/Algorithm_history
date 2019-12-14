@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <bitset>
+#include <stack>
+
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int test_case;
+    int T;
+    int list_input[1024];
+    cin >> T;
+    for(test_case = 1; test_case <= T; ++test_case)
+    {
+        int K;
+        int answer = 0;
+        cin >> K;
+        for (int i = 0; i < 1 << K; i++)
+        {
+            cin >> list_input[i];
+        }
+        for (int layer = K-1; layer > -1; layer--)
+        {
+            for(int index = 0; index < 1 << layer; index++)
+            {
+                if (list_input[2 * index] - list_input[2 * index+1] >= 0)
+                {
+                    answer += list_input[2 * index] - list_input[2 * index+1];
+                    list_input[index] = list_input[2 * index];
+                }
+                else
+                {
+                    answer += - list_input[2 * index] + list_input[2 * index+1];
+                    list_input[index] = list_input[2 * index + 1];
+                }
+            }
+        }
+        cout << "#" << test_case << " " << answer << endl;
+    }
+    return 0;
+}

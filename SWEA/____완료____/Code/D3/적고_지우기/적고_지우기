@@ -1,14 +1,11 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <bitset>
-#include <stack>
+#include<iostream>
+#include<string>
+#include <typeinfo>
 
 using namespace std;
 
-int main()
+int main(int argc, char** argv)
 {
-
     int test_case;
     int T;
     cin>>T;
@@ -19,7 +16,7 @@ int main()
         cin >> inputs;
         for (int i=0; i<inputs.size(); i++)
         {
-            int number = inputs[i];
+            int number = inputs[i] - '0';
             if (check[number])
             {
                 check[number] = 0;
@@ -40,5 +37,4 @@ int main()
         cout << "#" << test_case << " " << answer << endl;
     }
     return 0;
-    
 }

@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv)
+{
+	int test_case;
+	int T;
+    int number;
+    int temp;
+	cin>>T;
+	for(test_case = 1; test_case <= T; ++test_case)
+	{
+        int max = 1;
+        int min = 9*6;
+        for(int i = 0; i < 10; i++)
+        {
+            temp = 0;
+            cin >> number;
+            while (number / 10 != 0)
+            {
+                temp += number % 10;
+                number /= 10;
+            }
+            temp += number;
+            if (temp > max)
+            {
+                max = temp;
+            }
+            if (temp < min)
+            {
+                min = temp;
+            }
+        }
+        cout << "#" << test_case << " " << max << " " << min << endl;
+	}
+	return 0;
+}
