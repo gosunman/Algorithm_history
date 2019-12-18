@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int test_case;
+	int T;
+	int N_sample, temp;
+	cin >> T;
+	for (test_case = 1; test_case <= T; ++test_case)
+	{
+		cin >> N_sample;
+		int Nmin = 1000000, Nmax = 2;
+		while (N_sample--)
+		{
+			cin >> temp;
+			if (temp < Nmin)
+			{
+				Nmin = temp;
+			}
+			if (Nmax < temp)
+			{
+				Nmax = temp;
+			}
+		}
+		cout << "#"
+			 << test_case
+			 << " " << Nmin * Nmax << endl;
+	}
+	return 0;
+}
