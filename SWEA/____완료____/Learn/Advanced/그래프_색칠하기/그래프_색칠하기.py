@@ -19,7 +19,7 @@ for testCase in range(int(input())):
     # run
     count = 0
     color = 0
-    used = set()
+    available = set()
     colored_node = set()
 
     temp_table = []
@@ -30,15 +30,15 @@ for testCase in range(int(input())):
         target_node = -1
         max_size = 0
         for node in range(qnt_node):
-            if node not in used and len(temp_table[node]) > max_size:
+            if node not in available and len(temp_table[node]) > max_size:
                 max_size = len(temp_table[node])
                 target_node = node
 
         if target_node != -1:
-            used.add(target_node)
+            available.add(target_node)
             for node in temp_table[target_node]:
                 temp_table[node].remove(target_node)
-                used.add(node)
+                available.add(node)
             temp_table[target_node] = []
             colored_node.add(target_node)
             for node in range(qnt_node):
@@ -46,7 +46,7 @@ for testCase in range(int(input())):
                     table[node].remove(target_node)
             count += 1
         else:
-            used = set()
+            available = set()
             color += 1
             temp_table = []
             escape = 0
