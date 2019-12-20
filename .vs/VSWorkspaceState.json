@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Cpp200",
-    "\\Cpp200\\C++200",
-    "\\Cpp200\\Cpp200",
-    "\\Cpp200\\Cpp200.xcodeproj"
+    "\\Cpp200\\Cpp200.xcodeproj",
+    "\\Cpp200\\solved_history",
+    "\\Cpp200\\solved_history\\039"
   ],
-  "SelectedNode": "\\Cpp200\\Cpp200\\main.cpp",
+  "SelectedNode": "\\Cpp200\\solved_history\\039\\039",
   "PreviewInSolutionExplorer": false
 }
