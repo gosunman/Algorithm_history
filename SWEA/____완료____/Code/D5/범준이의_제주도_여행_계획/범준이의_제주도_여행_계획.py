@@ -8,46 +8,57 @@ start_time = timeit.default_timer()
 
 
 def solution(depth, limit, last_site, spent_time, history, temp_ans):
-    global table_info, table_sites, ans, qnt_sites, qnt_days, ans_history
+    global table_info, table_sites, ans, qnt_sites, qnt_days, ans_history, index_H
+    notFound = True
     if depth <= limit - 1:
-        for site in range(qnt_sites):
+        for site in range(1, index_H):
             if site != last_site:
                 if table_sites[site][0] == 'P':
                     if site not in history:
                         temp_time = spent_time + table_info[last_site][site] + int(table_sites[site][1])
                         if temp_time <= 9 * 60:
+                            notFound = False
                             history.append(site)
                             solution(depth, limit, site, temp_time, history, temp_ans + int(table_sites[site][2]))
-                            history.remove(site)
-                elif table_sites[site][0] == 'H':
-                    if spent_time + table_info[last_site][site] <= 9 * 60:
-                        history.append(site)
-                        solution(depth + 1, limit, site, 0, history, temp_ans)
-                        history.remove(site)
-                else:
-                    if depth == limit - 1:
-                        if spent_time + table_info[last_site][site] <= 9 * 60:
-                            if temp_ans > ans:
-                                history.append(site)
-                                ans = temp_ans
-                                ans_history = history[:]
-                                history.remove(site)
+                            history.pop()
+    if notFound:
+        if depth < limit - 1:
+            for site in range(index_H, qnt_sites):
+                if spent_time + table_info[last_site][site] <= 9 * 60:
+                    history.append(site)
+                    solution(depth + 1, limit, site, 0, history, temp_ans)
+                    history.pop()
+        else:
+            if spent_time + table_info[last_site][0] <= 9 * 60:
+                if temp_ans > ans:
+                    history.append(0)
+                    ans = temp_ans
+                    ans_history = history[:]
+                    history.pop()
 
 
 for t in range(int(input())):
     qnt_sites, qnt_days = map(int, input().split())
+
     table_info = [[0 for __ in range(qnt_sites)] for _ in range(qnt_sites)]
     for start in range(qnt_sites - 1):
         info = list(map(int, input().split()))
         for end in range(len(info)):
             table_info[start][1 + start + end] = info[end]
             table_info[1 + start + end][start] = info[end]
+
+    index_H = -1
+
     table_sites = [[] for _ in range(qnt_sites)]
     for _ in range(qnt_sites):
         table_sites[_] = input().split()
+        if index_H == -1 and table_sites[_][0] == 'H':
+            index_H = _
+
     ans = 0
     ans_history = []
     solution(0, qnt_days, 0, 0, [], 0)
+
     xx = list(map(lambda x: str(x + 1), ans_history))
     print("#{} {} {}".format(t + 1, ans, ' '.join(xx)))
 
