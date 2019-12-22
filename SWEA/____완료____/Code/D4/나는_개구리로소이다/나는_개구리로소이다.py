@@ -13,6 +13,8 @@ for testCase in range(int(input())):
     for word in I_words:
         if word == 'c':
             check[0] += 1
+            if check[0] > answer:
+                answer = check[0]
         elif word == 'r':
             if check[0] > check[1]:
                 check[1] += 1
@@ -33,13 +35,15 @@ for testCase in range(int(input())):
                 break
         else:
             if check[3] > check[4]:
-                check[4] += 1
+                # check[4] += 1
+                for i in range(4):
+                    check[i] -= 1
             else:
                 answer = -1
                 break
     if answer != -1:
         if check[0] == check[1] == check[2] == check[3] == check[4]:
-            answer = check[4]
+           pass
         else:
             answer = -1
     print("#{} {}".format(testCase + 1, answer))
