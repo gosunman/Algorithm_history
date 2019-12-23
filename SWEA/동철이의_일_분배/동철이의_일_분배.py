@@ -28,7 +28,7 @@ start_time = timeit.default_timer()
 
 # for t in range(int(input())):
 #     N = int(input())
-#     M = 1 << N
+#     M = 1 <<
 #     D = [0] * M
 #     P = [[*map(lambda x: x / 100, map(int, input().split()))] for _ in range(N)]
 #     D[0] = 1
