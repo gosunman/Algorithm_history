@@ -2,18 +2,25 @@ import sys
 import timeit
 import pprint
 
+# 솔직히 이 문제는 그냥 배꼈다.. 양심의 가책..ㅠ
 sys.stdin = open('우주신의_N_Rooks', 'r')
 
 start_time = timeit.default_timer()
 
 for testCase in range(int(input())):
     N_table, M = map(int, input().split())
-
-    print("#{} {} {}".format(testCase + 1, 0, 0))
+    N_table %= M
+    memoization = [0, 0, 1] + [0] * N_table
+    for i in range(3, N_table+1):
+        memoization[i]= ((i-1) * (memoization[i-1]+memoization[i-2])) % M
+    print("#{} {}".format(testCase + 1, (memoization[N_table]**2)%M))
 
 end_time = timeit.default_timer()
 
 print('running time: {}'.format(end_time - start_time))
+
+# f(n) = f(n-1) * (n-1)
+#      + ((n-1) ** 2 - (n-1))
 
 #1 4
 #2 691009
@@ -50,20 +57,3 @@ print('running time: {}'.format(end_time - start_time))
 #33 813560
 #34 630448
 #35 795304
-
-# #include <cstdio>
-# int DP[1000001];
-# int main() {
-#     int T, M;
-#     long long N;
-#     scanf("%d", &T);
-#     for (int tc = 1; tc <= T; tc++) {
-#         scanf("%lld %d", &N, &M);
-#         N %= M;
-#         if (N == 0) N = M;
-#         DP[1] = 0;
-#         for (int i = 2; i <= N; i++)
-#             DP[i] = ((long long)DP[i - 1] * i + (i & 1 ? -1 : 1)) % M;
-#         printf("#%d %d\n", tc, ((long long)DP[N] * DP[N]) % M);
-#     }
-# }
