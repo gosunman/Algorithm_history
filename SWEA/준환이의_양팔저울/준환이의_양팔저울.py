@@ -7,37 +7,41 @@ sys.stdin = open('준환이의_양팔저울', 'r')
 start_time = timeit.default_timer()
 
 
-def solution(depth, limit, left, right):
-    global answer, S_weights, available
-    if depth != limit:
-        count = limit-1
-        for i in range(limit):
-            if available[i]:
-                available[i] = 0
-                solution(depth+1, limit, left + S_weights[i], right)
-                if left >= right + S_weights[i]:
-                    solution(depth + 1, limit, left, right + S_weights[i])
-                else:
-                    count = i
-                    available[i] = 1
-                    break
-                available[i] = 1
-        for i in range(count+1, limit):
-            if available[i]:
-                available[i] = 0
-                solution(depth+1, limit, left + S_weights[i], right)
-                available[i] = 1
+def seq(current, end, result,):
+    global sequence
+    if current == end - 1:
+        sequence[end].append(result[:])
     else:
+        seq(current + 1, end, result)
+        for i in range(current + 1, end):
+            result[current], result[i] = result[i], result[current]
+            seq(current + 1, end, result)
+            result[current], result[i] = result[i], result[current]
+
+
+sequence = [[] for i in range(10)]
+
+for i in range(1, 10):
+    seq(0, i, list(range(i)))
+
+
+def solution(current, end, sum_l, sum_r):
+    global answer, array, S_weights
+    if current == end:
         answer += 1
+    else:
+        solution(current + 1, end, sum_l + S_weights[array[current]], sum_r)
+        if sum_l >= sum_r + S_weights[array[current]]:
+            solution(current + 1, end, sum_l, sum_r + S_weights[array[current]])
 
 
-for testCase in range(int(input())):
+for tc in range(int(input())):
     N_weights = int(input())
     S_weights = list(map(int, input().split()))
     answer = 0
-    available = [1 for _ in range(N_weights)]
-    solution(0, N_weights, 0, 0)
-    print("#{} {}".format(testCase + 1, answer))
+    for array in sequence[N_weights]:
+        solution(1, N_weights, S_weights[array[0]], 0)
+    print('#{} {}'.format(tc + 1, answer))
 
 end_time = timeit.default_timer()
 
