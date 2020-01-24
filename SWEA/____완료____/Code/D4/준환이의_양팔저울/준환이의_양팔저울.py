@@ -25,14 +25,17 @@ for i in range(1, 10):
     seq(0, i, list(range(i)))
 
 
-def solution(current, end, sum_l, sum_r):
+def solution(current, end, sum_l, sum_r, total):
     global answer, array, S_weights
-    if current == end:
-        answer += 1
+    if total - sum_l <= sum_l:
+        answer += 2**(end-current)
     else:
-        solution(current + 1, end, sum_l + S_weights[array[current]], sum_r)
-        if sum_l >= sum_r + S_weights[array[current]]:
-            solution(current + 1, end, sum_l, sum_r + S_weights[array[current]])
+        if current == end:
+            answer += 1
+        else:
+            solution(current + 1, end, sum_l + S_weights[array[current]], sum_r, total)
+            if sum_l >= sum_r + S_weights[array[current]]:
+                solution(current + 1, end, sum_l, sum_r + S_weights[array[current]], total)
 
 
 for tc in range(int(input())):
@@ -40,7 +43,7 @@ for tc in range(int(input())):
     S_weights = list(map(int, input().split()))
     answer = 0
     for array in sequence[N_weights]:
-        solution(1, N_weights, S_weights[array[0]], 0)
+        solution(1, N_weights, S_weights[array[0]], 0, sum(S_weights))
     print('#{} {}'.format(tc + 1, answer))
 
 end_time = timeit.default_timer()
