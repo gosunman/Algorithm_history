@@ -7,7 +7,37 @@ sys.stdin = open('서준이의_퍼즐_풀기', 'r')
 start_time = timeit.default_timer()
 
 for testCase in range(int(input())):
-    print("#{} {}".format(testCase + 1, 0))
+    N_size = int(input())
+    index = [] # 몇 개 짜리
+    S_column = {} # 몇 개 짜리 : 몇 개
+    answer = "Yes"
+    for i in map(int, input().split()):
+        if S_column.get(i):
+            S_column[i] += 1
+        else:
+            S_column[i] = 1
+            index.append(i)
+    index.sort()
+    S_row = sorted(list(map(int, input().split())), reverse=True)
+    for i in S_row:
+        count = 0
+        target_index = 0
+        while count < i:
+            count += S_column[index[target_index]]
+            target_index += 1
+        temp_index = 0
+        temp_count = 0
+        while temp_index != target_index + 1:
+            temp_count += S_column[index[temp_index]]
+            if temp_count < count:
+                temp_index += 1
+                if index[temp_index] == 1:
+                    pass
+                else:
+                    pass
+            else:
+                pass
+    print("#{} {}".format(testCase + 1, answer))
 
 end_time = timeit.default_timer()
 
