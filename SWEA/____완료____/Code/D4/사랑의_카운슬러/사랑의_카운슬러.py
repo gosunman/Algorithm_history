@@ -7,24 +7,15 @@ sys.stdin = open('사랑의_카운슬러', 'r')
 start_time = timeit.default_timer()
 
 
-def solution(index, x, y, count):
+def solution(index, p, m, count, sum_x, sum_y):
     global S_warms, answer, N_warms, available
     if count != N_warms:
-        if available[index]:
-            available[index] = 0
-            for i in range(N_warms):
-                if available[i]:
-                    available[i] = 0
-                    x_vector = S_warms[index][0] - S_warms[i][0]
-                    y_vector = S_warms[index][1] - S_warms[i][1]
-                    solution(index + 1, x + x_vector, y + y_vector, count + 2)
-                    solution(index + 1, x - x_vector, y - y_vector, count + 2)
-                    available[i] = 1
-            available[index] = 1
-        else:
-            solution(index + 1, x, y, count)
+        if p < N_warms // 2:
+            solution(index + 1, p + 1, m, count + 1, sum_x + S_warms[index][0], sum_y + S_warms[index][1])
+        if m < N_warms // 2:
+            solution(index + 1, p, m + 1, count + 1, sum_x - S_warms[index][0], sum_y - S_warms[index][1])
     else:
-        temp_answer = x ** 2 + y ** 2
+        temp_answer = sum_x ** 2 + sum_y ** 2
         if temp_answer < answer:
             answer = temp_answer
 
@@ -34,7 +25,7 @@ for testCase in range(int(input())):
     S_warms = [list(map(int, input().split())) for _ in range(N_warms)]
     available = [1 for _ in range(N_warms)]
     answer = float('inf')
-    solution(0, 0, 0, 0)
+    solution(0, 0, 0, 0, 0, 0)
     print("#{} {}".format(testCase + 1, answer))
 
 end_time = timeit.default_timer()
