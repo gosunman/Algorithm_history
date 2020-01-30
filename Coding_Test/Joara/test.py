@@ -2,7 +2,7 @@ import sys
 import timeit
 import pprint
 
-sys.stdin = open('../../input.txt', 'r')
+sys.stdin = open('../../problem_list.txt', 'r')
 
 start_time = timeit.default_timer()
 
