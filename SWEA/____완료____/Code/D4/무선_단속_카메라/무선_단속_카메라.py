@@ -16,12 +16,9 @@ for testCase in range(int(input())):
         for i in range(1, N_camera):
             S_calc.append(S_camera[i] - S_camera[i - 1])
         S_calc = sorted(S_calc)
-        #
-        # ans = 0
-        # for i in range(0, N_camera - N_receptor):
-        #     ans += S_calc[i]
-
-        ans = sum(S_calc[:(N_camera - 1)-(N_receptor - 1)])
+        ans = 0
+        for i in range(0, N_camera - N_receptor):
+            ans += S_calc[i]
     print("#{} {}".format(testCase + 1, ans))
 
 end_time = timeit.default_timer()
