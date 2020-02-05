@@ -5,9 +5,6 @@ sys.stdin = open('Shortest_Path_Faster', 'r')
 
 start_time = timeit.default_timer()
 
-que = [0] * 300001
-count = 0
-
 
 def en(ele):
     global count, que
@@ -18,6 +15,8 @@ def en(ele):
         if que[index][0] < que[index // 2][0]:
             que[index], que[index // 2] = que[index // 2], que[index]
             index //= 2
+        else:
+            index = 1
 
 
 def de():
@@ -32,10 +31,18 @@ def de():
                 if que[index] > que[target]:
                     que[index], que[target] = que[target], que[index]
                     index = target
+                else:
+                    count -= 1
+                    return pop_ele
             else:
                 if que[index] > que[index * 2]:
                     que[index], que[index * 2] = que[index * 2], que[index]
                     index *= 2
+                else:
+                    count -= 1
+                    return pop_ele
+        else:
+            index *= 2
     count -= 1
     return pop_ele
 
@@ -54,25 +61,22 @@ for testCase in range(int(input())):
             edges[b][a] = c
         else:
             edges[b] = {a: c}
-    available = [1 for _ in range(N_node + 1)]
     count = 0
-    que = []
-    available[start] = 0
+    que = [0] * 300001
     en([0, start])
     while start != end:
         point, start = de()
-        for key in edges[start].keys():
-            if key == end:
-                print("#{} {}".format(testCase + 1, point + edges[start][key]))
-                start = end
-                break
-            if available[key]:
-                available[key] = 0
-                en([key, point + edges[start][key]])
+        if start == end:
+            print("#{} {}".format(testCase + 1, point))
+        else:
+            for key, value in edges[start].items():
+                en([point + value, key])
 
 end_time = timeit.default_timer()
 
 print('running time: {}'.format(end_time - start_time))
+
+
 
 # 1 1
 # 2 3
