@@ -6,38 +6,18 @@ sys.stdin = open('동철이의_일_분배', 'r')
 
 start_time = timeit.default_timer()
 
-# def solution(depth, limit, temp, checked):
-#     global N_workers, S_workers, answer
-#     if depth != limit:
-#         for i in range(N_workers):
-#             if i not in checked:
-#                 checked.add(i)
-#                 solution(depth+1, limit, temp * S_workers[depth][i], checked)
-#                 checked.remove(i)
-#     else:
-#         if answer < temp * 100 / 100 ** N_workers:
-#             answer = temp * 100 / 100 ** N_workers
-#
-#
-# for testCase in range(int(input())):
-#     N_workers = int(input())
-#     S_workers = [list(map(int, input().split())) for _ in range(N_workers)]
-#     answer = 0
-#     solution(0, N_workers, 1, set())
-#     print("#{} {}".format(testCase + 1, answer))
-
-# for t in range(int(input())):
-#     N = int(input())
-#     M = 1 <<
-#     D = [0] * M
-#     P = [[*map(lambda x: x / 100, map(int, input().split()))] for _ in range(N)]
-#     D[0] = 1
-#     for mask in range(M):
-#         x = sum(1 for i in range(N) if mask & (1 << i))
-#         for j in range(N):
-#             if mask & (1 << j) == 0:
-#                 D[mask | (1 << j)] = max(D[mask | (1 << j)], D[mask] * P[x][j])
-#     print(f'#{t + 1} {D[-1] * 100:.6f}')
+for t in range(int(input())):
+    N = int(input())
+    M = 1 << N
+    D = [0] * M
+    P = [[*map(lambda x: x / 100, map(int, input().split()))] for _ in range(N)]
+    D[0] = 1
+    for mask in range(M):
+        x = sum(1 for i in range(N) if mask & (1 << i))
+        for j in range(N):
+            if mask & (1 << j) == 0:
+                D[mask | (1 << j)] = max(D[mask | (1 << j)], D[mask] * P[x][j])
+    print(f'#{t+1} {D[-1] * 100:.6f}')
 
 end_time = timeit.default_timer()
 
