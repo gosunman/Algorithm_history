@@ -12,22 +12,22 @@ for tc in range(int(input())):
     while stack:
         x, y, dx, dy, memory = stack.pop()
         while True:
-            if used.get(memory):
-                if used[memory].get(x):
-                    if used[memory][x].get(y):
-                        if used[memory][x][y].get(dx):
-                            if used[memory][x][y][dx].get(dy):
+            if used.get(x):
+                if used[x].get(y):
+                    if used[x][y].get(dx):
+                        if used[x][y][dx].get(dy):
+                            if used[x][y][dx][dy].get(memory):
                                 break
                             else:
-                                used[memory][x][y][dx][dy] = 1
+                                used[x][y][dx][dy][memory] = 1
                         else:
-                            used[memory][x][y][dx] = {dy: 1}
+                            used[x][y][dx][dy] = {memory: 1}
                     else:
-                        used[memory][x][y] = {dx: {dy: 1}}
+                        used[x][y][dx] = {dy: {memory: 1}}
                 else:
-                    used[memory][x] = {y: {dx: {dy: 1}}}
+                    used[x][y] = {dx: {dy: {memory: 1}}}
             else:
-                used[memory] = {x: {y: {dx: {dy: 1}}}}
+                used[x] = {y: {dx: {dy: {memory: 1}}}}
 
             if status[y][x] == "<":
                 dx = -1
@@ -56,10 +56,10 @@ for tc in range(int(input())):
                     dx = 0
                     dy = 1
             elif status[y][x] == "?":
-                stack.append([x, y, 0, 1, memory])
-                stack.append([x, y, 0, -1, memory])
-                stack.append([x, y, 1, 0, memory])
-                stack.append([x, y, -1, 0, memory])
+                stack.append([x, (y + 1) % R, 0, 1, memory])
+                stack.append([x, (y - 1) % R, 0, -1, memory])
+                stack.append([(x + 1) % C, y, 1, 0, memory])
+                stack.append([(x - 1) % C, y, -1, 0, memory])
                 break
             elif status[y][x] == ".":
                 pass
@@ -74,13 +74,8 @@ for tc in range(int(input())):
             else:
                 memory = int(status[y][x])
             x = (x + dx) % C
-            y = (y + dy) % C
-    print(x, y, dx, dy, memory)
+            y = (y + dy) % R
     print("#{} {}".format(tc + 1, answer))
-
-#1 YES
-#2 NO
-#3 YES
 
 # 1 YES
 # 2 NO
